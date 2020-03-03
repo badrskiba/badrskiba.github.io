@@ -1,12 +1,12 @@
 <body>
   <div>
-<a href="#" id="start_button" onclick="startDictation(event)">Dictate</a>
+<a href="#" id="start_button"  style="font-size:3em;" onclick="startDictation(event)">Dictate</a>
 &nbsp&nbsp
-<a href="index_us.html" id="start_button" ">  USversion</a>
+<a href="index_us.html" id="start_button"  style="font-size:2em;">  USversion</a>
 &nbsp&nbsp
-<a href="index_jp.html" id="start_button" ">  JPversion</a>
+<a href="index_jp.html" id="start_button" style="font-size:2em;">  JPversion</a>
 &nbsp&nbsp
-<a href="index_fr.html" id="start_button" ">  FRversion</a>
+<a href="index_fr.html" id="start_button" style="font-size:2em;">  FRversion</a>
 
 </div>
 
@@ -43,6 +43,7 @@ recognition.onresult = function(event) {
   for (var i = event.resultIndex; i < event.results.length; ++i) {
     if (event.results[i].isFinal) {
       final_transcript += event.results[i][0].transcript;
+      console.log(final_transcript)
     } else {
       interim_transcript += event.results[i][0].transcript;
     }
